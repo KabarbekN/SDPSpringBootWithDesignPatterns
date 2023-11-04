@@ -1,0 +1,10 @@
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: root
+    password: '0000'
+    url: jdbc:postgresql://localhost:5432/ecommercedb
+  jpa:
+    hibernate:
+      ddl-auto: update
