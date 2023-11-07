@@ -13,3 +13,6 @@ public class ProductDto {
     private String productType;
 }
 
+
+
+// data transfer object design pattern

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service // singleton
 @RequiredArgsConstructor
 public class ProductService {
     private final ProductRepository productRepository;
@@ -34,5 +34,4 @@ public class ProductService {
         return product;
     }
 }
-
 // Service is a Singleton design pattern, because always spring will initialise only one instance of this class and after work with this class

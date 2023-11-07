@@ -17,9 +17,10 @@ import java.util.List;
 public class CatalogController {
     private final ProductService productService;
 
-    @GetMapping
+    @GetMapping("/fuhehe")
     public ResponseEntity<List<Product>> findAll(){
         System.out.println(productService.findAllProducts());
         return ResponseEntity.ok( productService.findAllProducts());
     }
 }
+
