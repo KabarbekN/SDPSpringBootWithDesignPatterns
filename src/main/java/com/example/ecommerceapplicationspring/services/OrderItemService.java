@@ -1,7 +1,6 @@
 package com.example.ecommerceapplicationspring.services;
 
 
-import com.example.ecommerceapplicationspring.model.OrderItem;
 import com.example.ecommerceapplicationspring.repository.OrderItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
