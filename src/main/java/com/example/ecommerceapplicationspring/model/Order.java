@@ -16,11 +16,13 @@ import java.util.Set;
 @NoArgsConstructor
 @Entity
 @Data
-@Table(name = "order")
+@Table(name = "orders")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "orderid")
     private Long orderId;
+
     private String customerName;
     private String shippingAddress;
     private Integer totalAmount;
@@ -69,7 +71,6 @@ public class Order {
     )
     private Set<User> observers = new HashSet<>();
 
-    // ... other fields and methods ...
 
     public void registerObserver(User observer) {
         observers.add(observer);
@@ -83,5 +84,18 @@ public class Order {
         for (OrderObserver observer : observers) {
             observer.update(this);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "orderId=" + orderId +
+                ", customerName='" + customerName + '\'' +
+                ", shippingAddress='" + shippingAddress + '\'' +
+                ", totalAmount=" + totalAmount +
+                ", isPaid=" + isPaid +
+                ", isShipped=" + isShipped +
+                ", isDelivered=" + isDelivered +
+                '}';
     }
 }

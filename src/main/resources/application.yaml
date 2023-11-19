@@ -7,4 +7,4 @@ spring:
     url: jdbc:postgresql://localhost:5432/ecommercedb
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
