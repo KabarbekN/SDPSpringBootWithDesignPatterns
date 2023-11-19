@@ -27,4 +27,18 @@ public class ProductController {
     public ResponseEntity<?> createProduct(@RequestBody ProductDto productDto){
         return ResponseEntity.ok(productService.createProduct(productDto));
     }
+
+//    @GetMapping // get
+//    @PostMapping // create
+//    @PutMapping // update
+//    @DeleteMapping //id
+
+    @GetMapping("/delete/{id}")
+    public String deleteProductById(@PathVariable Long id){
+        productService.deleteProductById(id);
+        return "";
+    }
+
 }
+
+// contro -> service -> repo

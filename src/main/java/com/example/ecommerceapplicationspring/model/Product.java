@@ -29,5 +29,11 @@ public class Product {
 
     @Column(name = "productType")
     private ProductType productType;
+
+    @Column(name = "description")
+    private String description;
 }
+
+// controller -> service -> repository -> db, model -> repository -> servce -> controller
+
 

@@ -33,5 +33,9 @@ public class ProductService {
         productRepository.save(product);
         return product;
     }
+
+    public void deleteProductById(Long id){
+        productRepository.deleteById(id);
+    }
 }
 // Service is a Singleton design pattern, because always spring will initialise only one instance of this class and after work with this class
